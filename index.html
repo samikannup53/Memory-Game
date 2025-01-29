@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <section id="welcome-screen">
+        <h2>Welcome to the Era of New Age Gaming !</h2>
+        <button id="start-btn">Let's Start</button>
+      </section>
+
+      <section id="game-info">
+        <h2>Memory Based Card Game</h2>
+        <h3>Duration of the Game : <span>5 Mins</span></h3>
+        <h4>Enter Your Name to Start the Game</h4>
+        <input id="playerName" type="text" placeholder="Your Name" />
+        <button id="go-btn">Go</button>
+        <span>Short Description :</span>
+        <p>
+          The game starts with all the cards face down and players take turns to
+          turn over two cards. If the two cards have the same picture, then they
+          keep the cards, otherwise they turn the cards face down again. The
+          winner is the person with the most cards when all the cards have been
+          taken
+        </p>
+      </section>
+
+      <section id="gameScreen">
+        <div id="scoreBoard">
+          <span id="gbPlayerName">Samikannu P</span>
+          <div class="score-banner">
+            <h4>Score</h4>
+            <span id="score">01</span>
+          </div>
+          <div>
+            <button id="restartBtn">Restart</button>
+            <button id="closeBtn">Close</button>
+          </div>
+        </div>
+        <div id="gameBoard" class="game">
+          <div class="card" data-name="club-ace">
+            <img
+              class="front-face"
+              src="/assets/club-ace.png"
+              alt="Club Ace Card"
+            />
+            <img
+              class="back-face"
+              src="/assets/back-side.png"
+              alt="Card Backface"
+            />
+          </div>
+          <div class="card" data-name="club-king">
+            <img
+              class="front-face"
+              src="/assets/club-king.png"
+              alt="Club King Card"
+            />
+            <img
+              class="back-face"
+              src="/assets/back-side.png"
+              alt="Card Backface"
+            />
+          </div>
+          <div class="card" data-name="diamond-ace">
+            <img
+              class="front-face"
+              src="/assets/diamond-ace.png"
+              alt="Diamond Ace Card"
+            />
+            <img
+              class="back-face"
+              src="/assets/back-side.png"
+              alt="Card Backface"
+            />
+          </div>
+          <div class="card" data-name="diamond-king">
+            <img
+              class="front-face"
+              src="/assets/diamond-king.png"
+              alt="Diamon King Card"
+            />
+            <img
+              class="back-face"
+              src="/assets/back-side.png"
+              alt="Card Backface"
+            />
+          </div>
+          <div class="card" data-name="heart-ace">
+            <img
+              class="front-face"
+              src="/assets/heart-ace.png"
+              alt="Heart Ace Card"
+            />
+            <img
+              class="back-face"
+              src="/assets/back-side.png"
+              alt="Card Backface"
+            />
+          </div>
+          <div class="card" data-name="spade-ace">
+            <img
+              class="front-face"
+              src="/assets/spade-ace.png"
+              alt="Spade Ace Card"
+            />
+            <img
+              class="back-face"
+              src="/assets/back-side.png"
+              alt="Card Backface"
+            />
+          </div>
+          <div class="card" data-name="club-ace">
+            <img
+              class="front-face"
+              src="/assets/club-ace.png"
+              alt="Club Ace Card"
+            />
+            <img
+              class="back-face"
+              src="/assets/back-side.png"
+              alt="Card Backface"
+            />
+          </div>
+          <div class="card" data-name="club-king">
+            <img
+              class="front-face"
+              src="/assets/club-king.png"
+              alt="Club King Card"
+            />
+            <img
+              class="back-face"
+              src="/assets/back-side.png"
+              alt="Card Backface"
+            />
+          </div>
+          <div class="card" data-name="diamond-ace">
+            <img
+              class="front-face"
+              src="/assets/diamond-ace.png"
+              alt="Diamond Ace Card"
+            />
+            <img
+              class="back-face"
+              src="/assets/back-side.png"
+              alt="Card Backface"
+            />
+          </div>
+          <div class="card" data-name="diamond-king">
+            <img
+              class="front-face"
+              src="/assets/diamond-king.png"
+              alt="Diamon King Card"
+            />
+            <img
+              class="back-face"
+              src="/assets/back-side.png"
+              alt="Card Backface"
+            />
+          </div>
+          <div class="card" data-name="heart-ace">
+            <img
+              class="front-face"
+              src="/assets/heart-ace.png"
+              alt="Heart Ace Card"
+            />
+            <img
+              class="back-face"
+              src="/assets/back-side.png"
+              alt="Card Backface"
+            />
+          </div>
+          <div class="card" data-name="spade-ace">
+            <img
+              class="front-face"
+              src="/assets/spade-ace.png"
+              alt="Spade Ace Card"
+            />
+            <img
+              class="back-face"
+              src="/assets/back-side.png"
+              alt="Card Backface"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>

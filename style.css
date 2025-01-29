@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap");
+
+:root {
+  --primary-color: #082032;
+  --secondary-color: #2c394b;
+  --light-gray: #334756;
+  --yellow: #ffd700;
+  --white: #ffffff;
+  --sky-blue: #21e6c1;
+
+  --ff-inter: "Inter", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--primary-color);
+  font-family: var(--ff-inter);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#welcome-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome-screen h2 {
+  font-size: 2.8rem;
+  color: var(--sky-blue);
+  margin-bottom: 1em;
+  text-align: center;
+  cursor: default;
+}
+
+#start-btn {
+  background: var(--yellow);
+  color: var(--primary);
+  font-size: 1.5rem;
+  border: none;
+  padding: 0.5em 1.5em;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#game-info {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+#game-info h2 {
+  font-size: 2.25rem;
+  color: var(--sky-blue);
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+#game-info h3 {
+  font-size: 1.5rem;
+  color: var(--yellow);
+  text-align: center;
+  margin-bottom: 2.5em;
+}
+
+#game-info h4 {
+  font-size: 1rem;
+  color: var(--sky-blue);
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+#game-info p {
+  color: var(--sky-blue);
+  width: 85%;
+  text-align: center;
+  border-top: 1px solid var(--yellow);
+  padding-top: 0.25em;
+}
+
+#game-info span {
+  color: var(--yellow);
+  margin-bottom: 0.25em;
+}
+
+#playerName {
+  background: transparent;
+  color: var(--yellow);
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 0.5em;
+  border: 1px solid var(--yellow);
+  border-radius: 30px;
+  margin-bottom: 2.5em;
+}
+
+#go-btn {
+  background: var(--yellow);
+  color: var(--primary);
+  border: 2px solid var(--sky-blue);
+  padding: 1em;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 2em;
+}
+
+#gameScreen {
+  height: 100vh;
+  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+  padding: 2.5em;
+}
+
+#scoreBoard {
+  width: 100%;
+  display: flex;
+  padding: 1em 3em;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 20px;
+}
+
+#gameBoard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1em;
+  width: 680px;
+  height: 640px;
+  padding: 3em;
+}
+
+.card {
+  width: 150px;
+  position: relative;
+  height: 210px;
+  width: 150px;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
+.card.flip {
+  .back-face {
+    display: none;
+  }
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#gbPlayerName {
+  color: var(--sky-blue);
+  font-size: 1.25rem;
+  width: 175px;
+}
+
+.score-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.score-banner h4 {
+  color: var(--sky-blue);
+  font-size: 1rem;
+}
+
+#score {
+  color: var(--primary-color);
+  border: 1px solid var(--yellow);
+  background: var(--yellow);
+  font-size: 1.5rem;
+  border-radius: 100%;
+  padding: 0.5em 0.6em;
+}
+
+#restartBtn {
+  background: var(--sky-blue);
+  color: var(--primary-color);
+  padding: 0.6em 1.4em;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+#closeBtn {
+  background: var(--yellow);
+  color: var(--primary-color);
+  padding: 0.6em 1.6em;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+}
