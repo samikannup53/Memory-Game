@@ -3,8 +3,6 @@ let gameInfo = document.getElementById("game-info");
 let gameScreen = document.getElementById("gameScreen");
 let startBtn = document.getElementById("start-btn");
 let goBtn = document.getElementById("go-btn");
-let restartBtn = document.getElementById("restartBtn");
-let closeBtn = document.getElementById("closeBtn");
 
 startBtn.addEventListener("click", () => {
   welcomeScreen.style.display = "none";
@@ -16,7 +14,24 @@ goBtn.addEventListener("click", () => {
   welcomeScreen.style.display = "none";
   gameInfo.style.display = "none";
   gameScreen.style.display = "flex";
+  showPlayerName();
+  shuffleCards();
+  removeFlip();
+  resetBoard();
 });
+
+let playerName = document.getElementById("playerName");
+let gbPlayerName = document.getElementById("gbPlayerName");
+
+function showPlayerName() {
+  if (playerName.value != "") {
+    gbPlayerName.innerText = playerName.value;
+  } else {
+    alert("Kindly Enter Valid Player Name to Start the Game!");
+    gameInfo.style.display = "flex";
+    gameScreen.style.display = "none";
+  }
+}
 
 const cards = document.querySelectorAll(".card");
 
@@ -33,11 +48,6 @@ function shuffleCards() {
     card.style.order = randIndex;
   });
 }
-
-// restartBtn.addEventListener("click", () => {
-//   shuffleCards();
-//   cards.forEach((card) => card.classList.remove("flip"));
-// });
 
 cards.forEach((card) => card.addEventListener("click", flipCard));
 
@@ -80,4 +90,19 @@ function resetBoard() {
   hasFlippedCard = false;
   firstCard = null;
   secondCard = null;
+}
+
+let restartBtn = document.getElementById("restartBtn");
+restartBtn.addEventListener("click", () => {
+  welcomeScreen.style.display = "none";
+  gameInfo.style.display = "flex";
+  gameScreen.style.display = "none";
+  playerName.value = "";
+});
+
+function removeFlip() {
+  let card = document.querySelectorAll(".flip");
+  for (i = 0; i < card.length; i++) {
+    card[i].classList.remove("flip");
+  }
 }
