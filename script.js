@@ -20,20 +20,8 @@ goBtn.addEventListener("click", () => {
   shuffleCards();
   removeFlip();
   resetBoard();
+  click();
 });
-
-let playerName = document.getElementById("playerName");
-let gbPlayerName = document.getElementById("gbPlayerName");
-
-function showPlayerName() {
-  if (playerName.value != "") {
-    gbPlayerName.innerText = playerName.value;
-  } else {
-    alert("Kindly Enter Valid Player Name to Start the Game!");
-    gameInfo.style.display = "flex";
-    gameScreen.style.display = "none";
-  }
-}
 
 const cards = document.querySelectorAll(".card");
 
@@ -43,16 +31,9 @@ let firstCard;
 let secondCard;
 let score;
 
-shuffleCards();
-
-function shuffleCards() {
-  cards.forEach((card) => {
-    let randIndex = Math.floor(Math.random() * 12);
-    card.style.order = randIndex;
-  });
+function click() {
+  cards.forEach((card) => card.addEventListener("click", flipCard));
 }
-
-cards.forEach((card) => card.addEventListener("click", flipCard));
 
 function flipCard() {
   if (lockBoard) return;
@@ -76,7 +57,6 @@ function checkMatch() {
     secondCard.removeEventListener("click", flipCard);
     resetBoard();
     setTimeout(() => {
-      alert("Match Found !!!");
       scoreCount();
     }, 200);
   } else {
@@ -87,6 +67,27 @@ function checkMatch() {
       resetBoard();
       lockBoard = false;
     }, 500);
+  }
+}
+
+shuffleCards();
+
+function shuffleCards() {
+  cards.forEach((card) => {
+    let randIndex = Math.floor(Math.random() * 12);
+    card.style.order = randIndex;
+  });
+}
+let playerName = document.getElementById("playerName");
+let gbPlayerName = document.getElementById("gbPlayerName");
+
+function showPlayerName() {
+  if (playerName.value != "") {
+    gbPlayerName.innerText = playerName.value;
+  } else {
+    alert("Kindly Enter Valid Player Name to Start the Game!");
+    gameInfo.style.display = "flex";
+    gameScreen.style.display = "none";
   }
 }
 
@@ -108,11 +109,11 @@ function resetBoard() {
 
 let restartBtn = document.getElementById("restartBtn");
 restartBtn.addEventListener("click", () => {
-  welcomeScreen.style.display = "none";
-  gameInfo.style.display = "flex";
-  gameScreen.style.display = "none";
-  playerName.value = "";
   scoreDisplay.innerText = "0";
+  shuffleCards();
+  removeFlip();
+  resetBoard();
+  click();
 });
 
 function removeFlip() {
