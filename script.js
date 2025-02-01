@@ -3,6 +3,8 @@ let gameInfo = document.getElementById("game-info");
 let gameScreen = document.getElementById("gameScreen");
 let startBtn = document.getElementById("start-btn");
 let goBtn = document.getElementById("go-btn");
+let scoreDisplay = document.getElementById("scoreDisplay");
+let gbWrapper = document.getElementById("gbWrapper");
 
 startBtn.addEventListener("click", () => {
   welcomeScreen.style.display = "none";
@@ -39,6 +41,7 @@ hasFlippedCard = false;
 lockBoard = false;
 let firstCard;
 let secondCard;
+let score;
 
 shuffleCards();
 
@@ -74,6 +77,7 @@ function checkMatch() {
     resetBoard();
     setTimeout(() => {
       alert("Match Found !!!");
+      scoreCount();
     }, 200);
   } else {
     lockBoard = true;
@@ -83,6 +87,16 @@ function checkMatch() {
       resetBoard();
       lockBoard = false;
     }, 500);
+  }
+}
+
+function scoreCount() {
+  let flippedCard = document.querySelectorAll(".flip");
+  score = flippedCard.length / 2;
+  scoreDisplay.innerText = score;
+
+  if (score == 6) {
+    alert("Congradulations !!! You won the Match!!!");
   }
 }
 
@@ -98,6 +112,7 @@ restartBtn.addEventListener("click", () => {
   gameInfo.style.display = "flex";
   gameScreen.style.display = "none";
   playerName.value = "";
+  scoreDisplay.innerText = "0";
 });
 
 function removeFlip() {

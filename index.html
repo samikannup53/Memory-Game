@@ -40,7 +40,7 @@
           <span id="gbPlayerName">Player Name</span>
           <div class="score-banner">
             <h4>Score</h4>
-            <span id="score">01</span>
+            <span id="scoreDisplay">0</span>
           </div>
           <div class="score-btn">
             <button id="restartBtn">Restart</button>
@@ -48,149 +48,151 @@
         </div>
 
         <div id="gameBoard" class="game">
-          <div class="card" data-name="club-ace">
-            <img
-              class="front-face"
-              src="/assets/club-ace.png"
-              alt="Club Ace Card"
-            />
-            <img
-              class="back-face"
-              src="/assets/back-side.png"
-              alt="Card Backface"
-            />
-          </div>
-          <div class="card" data-name="club-king">
-            <img
-              class="front-face"
-              src="/assets/club-king.png"
-              alt="Club King Card"
-            />
-            <img
-              class="back-face"
-              src="/assets/back-side.png"
-              alt="Card Backface"
-            />
-          </div>
-          <div class="card" data-name="diamond-ace">
-            <img
-              class="front-face"
-              src="/assets/diamond-ace.png"
-              alt="Diamond Ace Card"
-            />
-            <img
-              class="back-face"
-              src="/assets/back-side.png"
-              alt="Card Backface"
-            />
-          </div>
-          <div class="card" data-name="diamond-king">
-            <img
-              class="front-face"
-              src="/assets/diamond-king.png"
-              alt="Diamon King Card"
-            />
-            <img
-              class="back-face"
-              src="/assets/back-side.png"
-              alt="Card Backface"
-            />
-          </div>
-          <div class="card" data-name="heart-ace">
-            <img
-              class="front-face"
-              src="/assets/heart-ace.png"
-              alt="Heart Ace Card"
-            />
-            <img
-              class="back-face"
-              src="/assets/back-side.png"
-              alt="Card Backface"
-            />
-          </div>
-          <div class="card" data-name="spade-ace">
-            <img
-              class="front-face"
-              src="/assets/spade-ace.png"
-              alt="Spade Ace Card"
-            />
-            <img
-              class="back-face"
-              src="/assets/back-side.png"
-              alt="Card Backface"
-            />
-          </div>
-          <div class="card" data-name="club-ace">
-            <img
-              class="front-face"
-              src="/assets/club-ace.png"
-              alt="Club Ace Card"
-            />
-            <img
-              class="back-face"
-              src="/assets/back-side.png"
-              alt="Card Backface"
-            />
-          </div>
-          <div class="card" data-name="club-king">
-            <img
-              class="front-face"
-              src="/assets/club-king.png"
-              alt="Club King Card"
-            />
-            <img
-              class="back-face"
-              src="/assets/back-side.png"
-              alt="Card Backface"
-            />
-          </div>
-          <div class="card" data-name="diamond-ace">
-            <img
-              class="front-face"
-              src="/assets/diamond-ace.png"
-              alt="Diamond Ace Card"
-            />
-            <img
-              class="back-face"
-              src="/assets/back-side.png"
-              alt="Card Backface"
-            />
-          </div>
-          <div class="card" data-name="diamond-king">
-            <img
-              class="front-face"
-              src="/assets/diamond-king.png"
-              alt="Diamon King Card"
-            />
-            <img
-              class="back-face"
-              src="/assets/back-side.png"
-              alt="Card Backface"
-            />
-          </div>
-          <div class="card" data-name="heart-ace">
-            <img
-              class="front-face"
-              src="/assets/heart-ace.png"
-              alt="Heart Ace Card"
-            />
-            <img
-              class="back-face"
-              src="/assets/back-side.png"
-              alt="Card Backface"
-            />
-          </div>
-          <div class="card" data-name="spade-ace">
-            <img
-              class="front-face"
-              src="/assets/spade-ace.png"
-              alt="Spade Ace Card"
-            />
-            <img
-              class="back-face"
-              src="/assets/back-side.png"
-              alt="Card Backface"
-            />
+          <div id="gbWrapper">
+            <div class="card" data-name="club-ace">
+              <img
+                class="front-face"
+                src="/assets/club-ace.png"
+                alt="Club Ace Card"
+              />
+              <img
+                class="back-face"
+                src="/assets/back-side.png"
+                alt="Card Backface"
+              />
+            </div>
+            <div class="card" data-name="club-king">
+              <img
+                class="front-face"
+                src="/assets/club-king.png"
+                alt="Club King Card"
+              />
+              <img
+                class="back-face"
+                src="/assets/back-side.png"
+                alt="Card Backface"
+              />
+            </div>
+            <div class="card" data-name="diamond-ace">
+              <img
+                class="front-face"
+                src="/assets/diamond-ace.png"
+                alt="Diamond Ace Card"
+              />
+              <img
+                class="back-face"
+                src="/assets/back-side.png"
+                alt="Card Backface"
+              />
+            </div>
+            <div class="card" data-name="diamond-king">
+              <img
+                class="front-face"
+                src="/assets/diamond-king.png"
+                alt="Diamon King Card"
+              />
+              <img
+                class="back-face"
+                src="/assets/back-side.png"
+                alt="Card Backface"
+              />
+            </div>
+            <div class="card" data-name="heart-ace">
+              <img
+                class="front-face"
+                src="/assets/heart-ace.png"
+                alt="Heart Ace Card"
+              />
+              <img
+                class="back-face"
+                src="/assets/back-side.png"
+                alt="Card Backface"
+              />
+            </div>
+            <div class="card" data-name="spade-ace">
+              <img
+                class="front-face"
+                src="/assets/spade-ace.png"
+                alt="Spade Ace Card"
+              />
+              <img
+                class="back-face"
+                src="/assets/back-side.png"
+                alt="Card Backface"
+              />
+            </div>
+            <div class="card" data-name="club-ace">
+              <img
+                class="front-face"
+                src="/assets/club-ace.png"
+                alt="Club Ace Card"
+              />
+              <img
+                class="back-face"
+                src="/assets/back-side.png"
+                alt="Card Backface"
+              />
+            </div>
+            <div class="card" data-name="club-king">
+              <img
+                class="front-face"
+                src="/assets/club-king.png"
+                alt="Club King Card"
+              />
+              <img
+                class="back-face"
+                src="/assets/back-side.png"
+                alt="Card Backface"
+              />
+            </div>
+            <div class="card" data-name="diamond-ace">
+              <img
+                class="front-face"
+                src="/assets/diamond-ace.png"
+                alt="Diamond Ace Card"
+              />
+              <img
+                class="back-face"
+                src="/assets/back-side.png"
+                alt="Card Backface"
+              />
+            </div>
+            <div class="card" data-name="diamond-king">
+              <img
+                class="front-face"
+                src="/assets/diamond-king.png"
+                alt="Diamon King Card"
+              />
+              <img
+                class="back-face"
+                src="/assets/back-side.png"
+                alt="Card Backface"
+              />
+            </div>
+            <div class="card" data-name="heart-ace">
+              <img
+                class="front-face"
+                src="/assets/heart-ace.png"
+                alt="Heart Ace Card"
+              />
+              <img
+                class="back-face"
+                src="/assets/back-side.png"
+                alt="Card Backface"
+              />
+            </div>
+            <div class="card" data-name="spade-ace">
+              <img
+                class="front-face"
+                src="/assets/spade-ace.png"
+                alt="Spade Ace Card"
+              />
+              <img
+                class="back-face"
+                src="/assets/back-side.png"
+                alt="Card Backface"
+              />
+            </div>
           </div>
         </div>
       </section>
