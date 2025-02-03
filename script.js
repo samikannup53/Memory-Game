@@ -16,11 +16,11 @@ startBtn.addEventListener("click", () => {
 
 // Adding Functionality to Go Button in Game Information Screen:
 goBtn.addEventListener("click", () => {
-welcomeScreen.style.display = "none";
-gameInfo.style.display = "none";
-gameScreen.style.display = "flex";
-winImage.style.display = 'none';
-gbWrapper.style.display = 'flex';
+  welcomeScreen.style.display = "none";
+  gameInfo.style.display = "none";
+  gameScreen.style.display = "flex";
+  winImage.style.display = "none";
+  gbWrapper.style.display = "flex";
   showPlayerName();
   shuffleCards();
   removeFlip();
@@ -102,7 +102,7 @@ function showPlayerName() {
 
 // Fuction to COUNT & DISPLAY SCORE:
 
-var winImage = document.querySelector('.win-image');
+var winImage = document.querySelector(".win-image");
 
 function scoreCount() {
   let flippedCard = document.querySelectorAll(".flip");
@@ -110,8 +110,8 @@ function scoreCount() {
   scoreDisplay.innerText = score;
   if (score == 6) {
     alert("Congradulations !!! You won the Match!!!");
-    winImage.style.display = 'block';
-    gbWrapper.style.display = 'none';
+    winImage.style.display = "block";
+    gbWrapper.style.display = "none";
   }
 }
 
@@ -133,12 +133,12 @@ function removeFlip() {
 // Adding Fucntionality to RESTART BUTTON of Game Screen:
 let restartBtn = document.getElementById("restartBtn");
 restartBtn.addEventListener("click", () => {
-  reStartConfirm()
-  });
+  reStartConfirm();
+});
 
 // Confirm Function for RESTART the Game
 function reStartConfirm() {
-  let reStartConfirmResult = confirm('Are You Sure want to Exit From the Game?');
+  let reStartConfirmResult = confirm("Are You Sure want to Restart the Game?");
   if (reStartConfirmResult == false) {
     event.preventDefault();
   } else {
@@ -147,20 +147,20 @@ function reStartConfirm() {
     removeFlip();
     resetBoard();
     click();
-    winImage.style.display = 'none';
-    gbWrapper.style.display = 'flex';
+    winImage.style.display = "none";
+    gbWrapper.style.display = "flex";
   }
 }
 
 // Adding Fucntionality to EXIT BUTTON of Game Screen:
 let exitBtn = document.getElementById("exitBtn");
 exitBtn.addEventListener("click", () => {
-  exitConfirm()
+  exitConfirm();
 });
-  
+
 // Confirm Function for EXIT BUTTON
 function exitConfirm() {
-  let exitResult = confirm('Are You Sure want to Exit From the Game?');
+  let exitResult = confirm("Are You Sure want to Exit From the Game?");
   if (exitResult == false) {
     event.preventDefault();
   } else {
@@ -170,7 +170,7 @@ function exitConfirm() {
     scoreDisplay.innerText = "0";
     playerName.value = "";
     gbplayerName.innerText = "";
-    winImage.style.display = 'none';
-    gbWrapper.style.display = 'flex';
+    winImage.style.display = "none";
+    gbWrapper.style.display = "flex";
   }
 }
